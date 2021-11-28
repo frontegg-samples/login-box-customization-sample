@@ -5,7 +5,6 @@ import 'react-tiny-fab/dist/styles.css';
 import {FaCode} from 'react-icons/fa';
 import {Accordion, Button, Header} from 'semantic-ui-react';
 import customizationOptions from './options';
-
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
@@ -31,7 +30,9 @@ function App() {
 
     const setCustomizationOption = (option: string) => {
         sessionStorage.setItem('customizationOption', option);
-        window.location.href = 'http://localhost:3000/account/login';
+        window.location.href = `${window.location.origin}/account/login`;
+        //
+        //     `${window.location.origin}/login-box-customization-sample/account/login`;
     }
 
     if (customizationOption === None) {
