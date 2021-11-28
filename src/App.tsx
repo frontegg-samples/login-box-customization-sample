@@ -9,6 +9,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import {
+    ChoosingTheme,
     HeaderImage,
     None,
 } from "./options/customization-option";
@@ -31,12 +32,10 @@ function App() {
     const setCustomizationOption = (option: string) => {
         sessionStorage.setItem('customizationOption', option);
         window.location.href = `${window.location.origin}/account/login`;
-        //
-        //     `${window.location.origin}/login-box-customization-sample/account/login`;
     }
 
     if (customizationOption === None) {
-        setCustomizationOption(HeaderImage);
+        setCustomizationOption(ChoosingTheme);
     }
 
     return (
