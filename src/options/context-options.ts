@@ -1,5 +1,5 @@
 const contextOptions =  {
-    baseUrl: 'https://loudapi.frontegg.com',
+    baseUrl: 'https://samples-demo.frontegg.com',
 };
 
 export default contextOptions;
