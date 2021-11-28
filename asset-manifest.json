@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/login-box-customization-sample/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/login-box-customization-sample/static/js/main.b54fd429.chunk.js",
-    "main.js.map": "/login-box-customization-sample/static/js/main.b54fd429.chunk.js.map",
+    "main.js": "/login-box-customization-sample/static/js/main.69dc6576.chunk.js",
+    "main.js.map": "/login-box-customization-sample/static/js/main.69dc6576.chunk.js.map",
     "runtime-main.js": "/login-box-customization-sample/static/js/runtime-main.753d77d9.js",
     "runtime-main.js.map": "/login-box-customization-sample/static/js/runtime-main.753d77d9.js.map",
     "static/css/2.3de8d0bb.chunk.css": "/login-box-customization-sample/static/css/2.3de8d0bb.chunk.css",
-    "static/js/2.104d15cd.chunk.js": "/login-box-customization-sample/static/js/2.104d15cd.chunk.js",
-    "static/js/2.104d15cd.chunk.js.map": "/login-box-customization-sample/static/js/2.104d15cd.chunk.js.map",
+    "static/js/2.5e88abef.chunk.js": "/login-box-customization-sample/static/js/2.5e88abef.chunk.js",
+    "static/js/2.5e88abef.chunk.js.map": "/login-box-customization-sample/static/js/2.5e88abef.chunk.js.map",
     "static/js/3.6bc5e52c.chunk.js": "/login-box-customization-sample/static/js/3.6bc5e52c.chunk.js",
     "static/js/3.6bc5e52c.chunk.js.map": "/login-box-customization-sample/static/js/3.6bc5e52c.chunk.js.map",
     "static/js/4.d41250ce.chunk.js": "/login-box-customization-sample/static/js/4.d41250ce.chunk.js",
@@ -15,15 +15,15 @@
     "index.html": "/login-box-customization-sample/index.html",
     "static/css/2.3de8d0bb.chunk.css.map": "/login-box-customization-sample/static/css/2.3de8d0bb.chunk.css.map",
     "static/css/main.8c8b27cf.chunk.css.map": "/login-box-customization-sample/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.104d15cd.chunk.js.LICENSE.txt": "/login-box-customization-sample/static/js/2.104d15cd.chunk.js.LICENSE.txt",
+    "static/js/2.5e88abef.chunk.js.LICENSE.txt": "/login-box-customization-sample/static/js/2.5e88abef.chunk.js.LICENSE.txt",
     "static/js/3.6bc5e52c.chunk.js.LICENSE.txt": "/login-box-customization-sample/static/js/3.6bc5e52c.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/login-box-customization-sample/static/media/outline-icons.ddae9b1b.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.753d77d9.js",
     "static/css/2.3de8d0bb.chunk.css",
-    "static/js/2.104d15cd.chunk.js",
+    "static/js/2.5e88abef.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.b54fd429.chunk.js"
+    "static/js/main.69dc6576.chunk.js"
   ]
 }
