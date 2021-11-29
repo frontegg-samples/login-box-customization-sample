@@ -10,7 +10,6 @@ import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import {
     ChoosingTheme,
-    HeaderImage,
     None,
 } from "./options/customization-option";
 import { Segment, Portal } from 'semantic-ui-react';

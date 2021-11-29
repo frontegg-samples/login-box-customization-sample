@@ -1,7 +1,6 @@
 import React from "react";
 import contextOptions from './context-options';
 import {FronteggProvider, FronteggThemeOptions} from "@frontegg/react";
-import {LocalizationsOverrides} from "@frontegg/types/Localizations";
 
 const themeOptions: FronteggThemeOptions = {
     loginBox: {
