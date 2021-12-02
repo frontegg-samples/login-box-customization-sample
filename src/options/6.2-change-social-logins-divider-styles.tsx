@@ -5,6 +5,9 @@ import {FronteggProvider, FronteggThemeOptions} from "@frontegg/react";
 const themeOptions: FronteggThemeOptions = {
     loginBox: {
         socialLogins: {
+            dividerTextStyle: {
+                color: 'red'
+            },
             dividerStyle: {
                 backgroundColor: '#f5f5f5',
                 borderColor: '#f5f5f5',
