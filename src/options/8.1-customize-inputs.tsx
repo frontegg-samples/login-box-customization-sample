@@ -19,6 +19,9 @@ const themeOptions: FronteggThemeOptions = {
                 padding: '0 15px',
                 transition: 'border-color .2s ease-in-out, box-shadow .2s ease-in-out',
             },
+            label: {
+                color: 'red',
+            }
         }
     }
 }
