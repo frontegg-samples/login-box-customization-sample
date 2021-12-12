@@ -2,6 +2,7 @@ import {
     ChoosingTheme,
     AddTermsAndConditions,
     ChangeBackground,
+    ChangeFont,
     FlatLoginBox,
     HeaderImage,
     ChangeSocialLoginsDividerText,
@@ -20,6 +21,7 @@ import {
 import ChoosingThemeProvider from "./options/1-choosing-a-theme";
 import HeaderImageProvider from './options/1-customize-header-image';
 import ChangeBackgroundProvider from './options/2-change-background';
+import ChangeFontProvider from './options/2.1-change-fonts';
 import FlatLoginBoxProvider from './options/3-flat-login-box';
 import SplitLayoutProvider from './options/4-split-layout';
 import SocialLoginLayoutProvider from './options/5.1-social-logins-layout';
@@ -116,6 +118,30 @@ const Provider = () => (
 
 export default Provider;`
 },
+    {
+        key: ChangeFont,
+        text: 'Change font for your login box',
+        Provider: <ChangeFontProvider />,
+        snippet: `import React from "react";
+import contextOptions from './context-options';
+import { FronteggProvider, FronteggThemeOptions } from "@frontegg/react";
+
+const themeOptions: FronteggThemeOptions = {
+    loginBox: {
+        typography: {
+            fontFamily: '"Open Sans", sans-serif',
+        }
+    }
+}
+
+const Provider = () => (
+    <FronteggProvider contextOptions={contextOptions} themeOptions={themeOptions}>
+        <div />
+    </FronteggProvider>
+);
+
+export default Provider;`,
+    },
     {
         key: FlatLoginBox,
         text: 'Flatten your login box',

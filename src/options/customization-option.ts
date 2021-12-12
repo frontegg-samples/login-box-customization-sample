@@ -2,6 +2,7 @@ export const None = "None";
 export const ChoosingTheme = "ChoosingTheme";
 export const HeaderImage = "HeaderImage";
 export const ChangeBackground = "ChangeBackground";
+export const ChangeFont = "ChangeFont";
 export const FlatLoginBox = "FlatLoginBox";
 export const ChangeButtonsColor = "ChangeButtonsColor";
 export const SplitLayout = "SplitLayout";
