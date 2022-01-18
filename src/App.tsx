@@ -13,6 +13,7 @@ import {
     None,
 } from "./options/customization-option";
 import { Segment, Portal } from 'semantic-ui-react';
+import {useAuth} from "@frontegg/react";
 
 function loadProvider(option: string) {
     const customizationOption = customizationOptions.find(o => o.key === option);
