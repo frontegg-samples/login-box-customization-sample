@@ -3,6 +3,9 @@
 This is a sample of how to customize the login box using the Frontegg Theme Options.
 This sample is based on React.js but the same themeOptions are relevant for angular and vue. 
 
+## Demo is always better than code
+So this is why we have deployed this sample to aws amplify hosted application available [here](https://master.dt42w6tmpzzg7.amplifyapp.com/account/login)
+
 ## Running the sample
 
 After cloning the project, install it using
