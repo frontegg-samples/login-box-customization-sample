@@ -15,11 +15,14 @@ import {
     CustomizeInputs,
     CustomizeLinks,
     CustomizeSubmitButton,
-    CustomizeLoader, CustomizeInputErrors
+    CustomizeLoader,
+    CustomizeInputErrors,
+    CustomizeTopBar
 } from "./options/customization-option";
 
 import ChoosingThemeProvider from "./options/1-choosing-a-theme";
 import HeaderImageProvider from './options/1-customize-header-image';
+import HeaderTopBarProvider from './options/1.1-customize-header-top-bar';
 import ChangeBackgroundProvider from './options/2-change-background';
 import ChangeFontProvider from './options/2.1-change-fonts';
 import FlatLoginBoxProvider from './options/3-flat-login-box';
@@ -67,10 +70,10 @@ const Provider = () => (
 export default Provider;`
     },
     {
-    key: HeaderImage,
-    text: 'Change header image',
-    Provider: <HeaderImageProvider />,
-    snippet: `import React from 'react';
+        key: HeaderImage,
+        text: 'Change header image',
+        Provider: <HeaderImageProvider/>,
+        snippet: `import React from 'react';
 import contextOptions from './context-options';
 import {FronteggProvider, FronteggThemeOptions} from '@frontegg/react';
 
@@ -92,11 +95,83 @@ const Provider = () => (
 );
 
 export default Provider;`
-},
+    },
+    {
+        key: CustomizeTopBar,
+        text: 'Customize your own top bar / banner',
+        Provider: <HeaderTopBarProvider/>,
+        snippet: `import React from 'react';
+import contextOptions from './context-options';
+import {FronteggProvider, FronteggThemeOptions} from '@frontegg/react';
+
+// Replace this with your app logo 👇
+const headerImage = 'https://assets.frontegg.com/public-frontegg-assets/acme-logo.svg';
+
+const themeOptions: FronteggThemeOptions = {
+loginBox: {
+        login: {
+            pageHeader: () => <div style={{
+                height: '64px',
+                width: '100%',
+                position: 'fixed',
+                top: '0',
+                background: 'linear-gradient(45deg, #6F7DFF, #6EC2C8)',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center'
+            }}>
+                <h6 style={{
+                    marginLeft: '32px',
+                    marginRight: '32px',
+                    color: 'white',
+                    lineHeight: '22px',
+                    fontSize: '16px',
+                    fontFamily: 'Manrope',
+                    letterSpacing: '0.01em'
+                }}>Love our new
+                    login? Join the beta to get all these new login methods in your login box</h6>
+                <button style={{
+                    cursor: 'pointer',
+                    border: 'none',
+                    height: '40px',
+                    minWidth: '135px',
+                    borderRadius: '4px',
+                    backgroundColor: 'white',
+                    padding: '8px 16px 8px 16px',
+                    color: '#6F7DFF',
+                    fontFamily: 'Manrope',
+                    lineHeight: '22px',
+                    letterSpacing: '0.01em',
+                    marginRight: '32px'
+                }}
+                        onMouseEnter={(e) => {
+                            (e.target as HTMLInputElement).style.color = "white";
+                            (e.target as HTMLInputElement).style.backgroundColor = '#6F7DFF';
+                        }}
+                        onMouseLeave={(e ) => {
+                            (e.target as HTMLInputElement).style.color = "#6F7DFF";
+                            (e.target as HTMLInputElement).style.backgroundColor = 'white';
+                        }}
+                        onClick={() => window.open('https://google.com')}>Join
+                    the beta
+                </button>
+            </div>
+        }
+    }
+}
+
+const Provider = () => (
+    <FronteggProvider contextOptions={contextOptions} headerImage={headerImage} themeOptions={themeOptions}>
+        <div />
+    </FronteggProvider>
+);
+
+export default Provider;`
+    },
     {
         key: ChangeBackground,
         text: 'Change background image',
-        Provider: <ChangeBackgroundProvider />,
+        Provider: <ChangeBackgroundProvider/>,
         snippet: `import React from "react";
 import {FronteggProvider, FronteggThemeOptions} from '@frontegg/react'a;
 import backgroundImage from '../assets/gradient';
@@ -117,11 +192,11 @@ const Provider = () => (
 );
 
 export default Provider;`
-},
+    },
     {
         key: ChangeFont,
         text: 'Change font for your login box',
-        Provider: <ChangeFontProvider />,
+        Provider: <ChangeFontProvider/>,
         snippet: `import React from "react";
 import contextOptions from './context-options';
 import { FronteggProvider, FronteggThemeOptions } from "@frontegg/react";
@@ -145,7 +220,7 @@ export default Provider;`,
     {
         key: FlatLoginBox,
         text: 'Flatten your login box',
-        Provider: <FlatLoginBoxProvider />,
+        Provider: <FlatLoginBoxProvider/>,
         snippet: `import React from "react";
 import contextOptions from './context-options';
 import {FronteggProvider, FronteggThemeOptions} from "@frontegg/react";
@@ -166,11 +241,11 @@ const Provider = () => (
 );
 
 export default Provider;`
-},
+    },
     {
         key: SplitLayout,
         text: 'Split layout mode',
-        Provider: <SplitLayoutProvider />,
+        Provider: <SplitLayoutProvider/>,
         snippet: `import React from "react";
 import {FronteggProvider, FronteggThemeOptions} from "@frontegg/react";
 import contextOptions from './context-options';
@@ -199,11 +274,11 @@ const Provider = () => (
 );
 
 export default Provider;`
-},
+    },
     {
         key: ChangeSocialLoginsLayout,
         text: 'Stack social login buttons',
-        Provider: <SocialLoginLayoutProvider />,
+        Provider: <SocialLoginLayoutProvider/>,
         snippet: `import React from "react";
 import {FronteggProvider, FronteggThemeOptions} from "@frontegg/react";
 import contextOptions from './context-options';
@@ -235,7 +310,7 @@ export default Provider;`
     {
         key: ChangeSocialLoginsIconsOnly,
         text: 'Display icons only on social logins',
-        Provider: <SocialLoginButtonsIconsOnlyProvider />,
+        Provider: <SocialLoginButtonsIconsOnlyProvider/>,
         snippet: `import React from "react";
 import {FronteggProvider, FronteggThemeOptions} from "@frontegg/react";
 import contextOptions from './context-options';
@@ -318,7 +393,7 @@ export default Provider;`
     {
         key: ChangeSocialLoginsDividerStyle,
         text: "Change social logins divider style",
-        Provider: <SocialLoginsDividerStyleProvider />,
+        Provider: <SocialLoginsDividerStyleProvider/>,
         snippet: `import React from "react";
 import contextOptions from './context-options';
 import {FronteggProvider, FronteggThemeOptions} from "@frontegg/react";
@@ -352,7 +427,7 @@ export default Provider;`
     {
         key: ImplementYourOwnSocialLoginsDivider,
         text: "Implement your own social logins divider",
-        Provider: <SocialLoginsDividerNewProvider />,
+        Provider: <SocialLoginsDividerNewProvider/>,
         snippet: `import React from "react";
 import contextOptions from './context-options';
 import {FronteggProvider, FronteggThemeOptions} from "@frontegg/react";
@@ -378,7 +453,7 @@ export default Provider;`
     {
         key: AddTermsAndConditions,
         text: "Add terms and conditions footer",
-        Provider: <TermsAndConditionsProvider />,
+        Provider: <TermsAndConditionsProvider/>,
         snippet: `import React from "react";
 import contextOptions from './context-options';
 import {FronteggProvider, FronteggThemeOptions} from "@frontegg/react";
@@ -428,7 +503,7 @@ export default Provider;`
     {
         key: CustomizeInputs,
         text: 'Customize the styles of the inputs',
-        Provider: <CustomizeInputsProvider />,
+        Provider: <CustomizeInputsProvider/>,
         snippet: `import React from "react";
 import {FronteggProvider, FronteggThemeOptions} from "@frontegg/react";
 import contextOptions from './context-options';
@@ -467,7 +542,7 @@ export default Provider;`,
     {
         key: CustomizeLinks,
         text: 'Customize the links',
-        Provider: <CustomizeLinksProvider />,
+        Provider: <CustomizeLinksProvider/>,
         snippet: `import React from "react";
 import {FronteggProvider, FronteggThemeOptions} from "@frontegg/react";
 import contextOptions from './context-options';
@@ -492,7 +567,7 @@ export default Provider;`
     {
         key: CustomizeSubmitButton,
         text: 'Customize the submit button',
-        Provider: <CustomizeSubmitButtonProvider />,
+        Provider: <CustomizeSubmitButtonProvider/>,
         snippet: `import React from "react";
 import {FronteggProvider, FronteggThemeOptions} from "@frontegg/react";
 import contextOptions from './context-options';
@@ -519,7 +594,7 @@ export default Provider;`
     {
         key: CustomizeInputErrors,
         text: 'Customize the input errors',
-        Provider: <CustomizeInputErrorsProvider />,
+        Provider: <CustomizeInputErrorsProvider/>,
         snippet: `import React from "react";
 import {FronteggProvider, FronteggThemeOptions} from "@frontegg/react";
 import contextOptions from './context-options';
@@ -549,7 +624,7 @@ export default Provider;`
     {
         key: CustomizeLoader,
         text: 'Customize the login loader',
-        Provider: <CustomizeLoaderProvider />,
+        Provider: <CustomizeLoaderProvider/>,
         snippet: `import React, {useState} from "react";
 import {FronteggProvider, ThemeOptions} from "@frontegg/react";
 

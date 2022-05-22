@@ -1,6 +1,7 @@
 export const None = "None";
 export const ChoosingTheme = "ChoosingTheme";
 export const HeaderImage = "HeaderImage";
+export const CustomizeTopBar = "CustomizeTopBar"
 export const ChangeBackground = "ChangeBackground";
 export const ChangeFont = "ChangeFont";
 export const FlatLoginBox = "FlatLoginBox";

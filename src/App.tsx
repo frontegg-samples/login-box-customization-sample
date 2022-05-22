@@ -13,7 +13,6 @@ import {
     None,
 } from "./options/customization-option";
 import { Segment, Portal } from 'semantic-ui-react';
-import {useAuth} from "@frontegg/react";
 
 function loadProvider(option: string) {
     const customizationOption = customizationOptions.find(o => o.key === option);
@@ -40,13 +39,6 @@ function App() {
 
     return (
     <div className="App">
-        {/*<Fab alwaysShowTitle={true} icon={<FaPaintBrush />}>*/}
-        {/*    {customizationOptions.map((o) => {*/}
-        {/*        return <Action text={o.text} onClick={() => setCustomizationOption(o.key)}>*/}
-        {/*            <FaBeer />*/}
-        {/*        </Action>*/}
-        {/*    })}*/}
-        {/*</Fab>*/}
         {!showPortal  && <Fab text={"Help"} style={{left: 0, bottom: 0}} icon={<FaCode />} onClick={() => setShowPortal(true)} /> }
         { loadProvider(customizationOption) }
         <Portal
